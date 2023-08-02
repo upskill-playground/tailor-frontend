@@ -30,7 +30,18 @@ export default {
         25: "#FCFCFD",
       },
     },
-    extend: {},
+
+    extend: {
+      fontSize: {
+        xs: "10px",
+        sm: "12px",
+        base: "16px",
+        lg: "20px",
+        xl: "24px",
+        "2xl": "30px",
+        "3xl": "36px",
+      },
+    },
   },
   plugins: [],
 };
