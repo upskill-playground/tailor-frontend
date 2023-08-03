@@ -1,12 +1,5 @@
 import React from "react";
-
-interface ButtonProps {
-  children: React.ReactNode;
-  variant?: string;
-  width?: string;
-  mt?: string;
-  isDisabled?: boolean;
-}
+import { ButtonProps } from "../interfaceProps";
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -19,9 +12,9 @@ const Button: React.FC<ButtonProps> = ({
     <div>
       {variant === "solid" ? (
         <button
-          className={`bg-orange-400 text-gray-25 text-base font-semibold rounded-md p-2 ${
+          className={`disabled:bg-orange-300 bg-orange-400 text-gray-25 text-base font-semibold rounded-md p-2 ${
             width || "w-auto"
-          } ${mt || "mt-0"} cursor-pointer  disabled:opacity-0.75`}
+          } ${mt || "mt-0"} cursor-pointer `}
           disabled={isDisabled}
         >
           {children}

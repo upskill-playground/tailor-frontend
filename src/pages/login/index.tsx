@@ -4,17 +4,14 @@ import Text from "../../design-system/Text";
 import { Formik, Form } from "formik";
 import Button from "../../design-system/Button";
 import Input from "../../design-system/Input";
-
-type formik = {
-  email: string;
-};
+import { formikLoginHelper } from "../../utils/types";
 
 const Login: React.FC = () => {
-  let data: formik = {
+  let data: formikLoginHelper = {
     email: "",
   };
 
-  const handleSubimt = (doc: formik) => {
+  const handleSubimt = (doc: formikLoginHelper) => {
     console.log(doc);
   };
   return (

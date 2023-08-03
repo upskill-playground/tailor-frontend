@@ -1,8 +1,5 @@
 import React from "react";
-
-interface FormLabelProps {
-  children: React.ReactNode;
-}
+import { FormLabelProps } from "../interfaceProps";
 
 const FormLabel: React.FC<FormLabelProps> = ({ children }) => {
   return (

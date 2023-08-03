@@ -1,17 +1,5 @@
 import React from "react";
-
-interface InputProps {
-  type: string;
-  placeholder: string;
-  name: string;
-  value: string | number;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  width?: string;
-  max?: number;
-  minimum?: number;
-  maximum?: number;
-  classText?: string;
-}
+import { InputProps } from "../interfaceProps";
 
 const Input: React.FC<InputProps> = ({
   type,
@@ -43,3 +31,32 @@ const Input: React.FC<InputProps> = ({
 };
 
 export default Input;
+
+export const OtpInput: React.FC<InputProps> = ({
+  type,
+  placeholder,
+  name,
+  value,
+  onChange,
+  width,
+  minimum,
+  max,
+  maximum,
+  classText,
+}) => {
+  return (
+    <input
+      value={value}
+      type={type}
+      min={minimum}
+      max={maximum}
+      maxLength={max}
+      onChange={onChange}
+      name={name}
+      className={`bg-gray-700 p-2.5 text-gray-50 ${classText} font-medium rounded-lg placeholder:text-gray-500   ${
+        width || "w-auto"
+      } focus:outline-none border border-gray-600`}
+      placeholder={placeholder}
+    />
+  );
+};

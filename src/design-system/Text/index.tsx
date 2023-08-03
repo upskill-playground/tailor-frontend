@@ -1,19 +1,12 @@
 import React from "react";
-
-interface TextProps {
-  children: React.ReactNode;
-  type: string;
-  fontSize?: string;
-  color?: string;
-  mt?: string;
-}
+import { TextProps } from "../interfaceProps";
 
 const Text: React.FC<TextProps> = ({ children, type, fontSize, color, mt }) => {
   return (
     <div>
       {type === "lg" ? (
         <h3
-          className={`${fontSize || "text-3xl"} ${
+          className={`${fontSize || "text-xl xl:text-3xl"} ${
             color || "text-gray-100"
           } font-semibold m-0 p-0`}
         >
@@ -21,7 +14,7 @@ const Text: React.FC<TextProps> = ({ children, type, fontSize, color, mt }) => {
         </h3>
       ) : type === "md" ? (
         <h4
-          className={`${fontSize || "text-base"} ${
+          className={`${fontSize || "text-sm xl:text-base"} ${
             color || "text-gray-100"
           } font-normal  m-0 p-0`}
         >
