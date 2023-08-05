@@ -6,7 +6,7 @@ import { OtpInput } from "../../design-system/Input";
 import { formikHelper } from "../../utils/types";
 
 const OtpPage: React.FC = () => {
-  let data: formikHelper = {
+  const data: formikHelper = {
     otpDigit1: "",
     otpDigit2: "",
     otpDigit3: "",
