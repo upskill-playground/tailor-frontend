@@ -14,16 +14,24 @@ const Login: React.FC = () => {
   const handleSubimt = (doc: formikLoginHelper) => {
     console.log(doc);
   };
+
+  const isFormFilled = (values: formikLoginHelper): boolean => {
+    return Object.values(values).every((value) => value.trim().length > 0);
+  };
   return (
-    <div className="h-screen grid place-items-center p-2">
-      <div className="w-80">
-        <Text type="lg">Log in</Text>
-        <Text type="md">Welcome back! Please enter your details.</Text>
+    <div className="h-screen grid place-items-center p-3.5 overflow-hidden">
+      <div className="w-full xl:w-96 ">
+        <Text type="lg" align="text-center">
+          Welcome
+        </Text>
+        <Text type="md" color="text-gray-400" align="text-center">
+          Log in to access your Stylescribe account.
+        </Text>
         <Formik initialValues={data} onSubmit={handleSubimt}>
           {({ values, handleChange }) => (
             <Form>
               <div className="mt-9">
-                <FormLabel>Email</FormLabel>
+                <FormLabel color="text-gray-400">Enter Email</FormLabel>
                 <Input
                   type="email"
                   onChange={handleChange}
@@ -32,8 +40,13 @@ const Login: React.FC = () => {
                   width="w-full"
                   name="email"
                 />
-                <Button variant="solid" width="w-full" mt="mt-8">
-                  Log in
+                <Button
+                  variant="solid"
+                  width="w-full"
+                  mt="mt-8"
+                  isDisabled={!isFormFilled(values)}
+                >
+                  Continue
                 </Button>
               </div>
             </Form>

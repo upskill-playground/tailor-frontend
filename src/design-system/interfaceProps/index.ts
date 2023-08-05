@@ -4,6 +4,7 @@ export interface TextProps {
   fontSize?: string;
   color?: string;
   mt?: string;
+  align?: string;
 }
 
 export interface ButtonProps {
@@ -16,6 +17,7 @@ export interface ButtonProps {
 
 export interface FormLabelProps {
   children: React.ReactNode;
+  color?: string;
 }
 
 export interface InputProps {

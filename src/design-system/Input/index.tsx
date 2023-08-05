@@ -22,7 +22,7 @@ const Input: React.FC<InputProps> = ({
       maxLength={max}
       onChange={onChange}
       name={name}
-      className={`bg-gray-50 p-2.5 text-gray-900 ${classText} font-medium rounded-lg placeholder:text-gray-500   ${
+      className={`bg-gray-50 p-2.5 text-gray-900 ${classText} font-medium rounded-md placeholder:text-gray-500   ${
         width || "w-auto"
       } focus:outline-none border border-gray-700`}
       placeholder={placeholder}
