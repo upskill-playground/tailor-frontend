@@ -32,3 +32,20 @@ export interface InputProps {
   maximum?: number;
   classText?: string;
 }
+
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export interface SideModalProps {
+  children: React.ReactNode;
+  title?: string;
+  position?: string;
+  opacity?: string;
+  handleClose: () => void;
+}
+
+export interface MobileProps {
+  show?: boolean;
+  handleClose: () => void;
+}

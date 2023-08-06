@@ -35,6 +35,7 @@ export default {
         50: "#F9FAFB",
         25: "#FCFCFD",
       },
+      blur: "#1D2939BD",
     },
 
     extend: {
