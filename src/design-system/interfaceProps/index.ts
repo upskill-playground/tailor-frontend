@@ -49,3 +49,13 @@ export interface MobileProps {
   show?: boolean;
   handleClose: () => void;
 }
+
+interface Metrics {
+  title: string;
+  amount: number;
+  metric?: string;
+  percentage?: number;
+}
+export interface MetricsCardProps {
+  content: Metrics;
+}
