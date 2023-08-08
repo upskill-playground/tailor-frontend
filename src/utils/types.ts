@@ -8,3 +8,9 @@ export type formikHelper = {
 export type formikLoginHelper = {
   email: string;
 };
+
+export type ProfileFormHelper = {
+  name: string;
+  email: string;
+  current_role: string;
+};

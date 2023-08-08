@@ -1,3 +1,5 @@
+import { ProfileFormHelper } from "../../utils/types";
+
 export interface TextProps {
   children: React.ReactNode;
   type: string;
@@ -88,4 +90,11 @@ export interface JobCardProps {
 
 export interface TableProps {
   onOpen: () => void;
+}
+
+export interface ProfileFormProps {
+  show: boolean;
+  onClose: () => void;
+  content?: ProfileFormHelper;
+  isEdit?: boolean;
 }

@@ -4,6 +4,7 @@ import Customers from "./pages/customers";
 import Dashboard from "./pages/dashboard";
 import Login from "./pages/login";
 import OtpPage from "./pages/OTP";
+import Settings from "./pages/settings";
 import Tasks from "./pages/tasks";
 import PrivateRoutes from "./utils/PrivateRoutes";
 
@@ -15,6 +16,7 @@ const App = () => {
           <Route element={<Dashboard />} exact path="/" />
           <Route element={<Customers />} path="/customers" />
           <Route element={<Tasks />} path="/tasks" />
+          <Route element={<Settings />} path="/settings" />
         </Route>
         <Route element={<Login />} path="/login" />
         <Route element={<OtpPage />} path="/OTP" />

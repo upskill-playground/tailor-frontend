@@ -70,3 +70,14 @@ export const jobs = [
     assigned_to: "stanis baratheon",
   },
 ];
+
+export const roles = [
+  {
+    name: "admin",
+    value: "admin",
+  },
+  {
+    name: "staff",
+    value: "staff",
+  },
+];

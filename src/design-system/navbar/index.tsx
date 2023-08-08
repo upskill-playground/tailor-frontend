@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoSettingsOutline, IoMenuOutline } from "react-icons/io5";
 import { navLinks } from "../../utils/enums";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Mobile from "./mobile";
 
 const Navbar: React.FC = () => {
@@ -12,7 +12,9 @@ const Navbar: React.FC = () => {
   };
   return (
     <>
-      <Mobile show={show} handleClose={onClose} />
+      <div className="block xl:hidden md:hidden">
+        <Mobile show={show} handleClose={onClose} />
+      </div>
       <div className="border border-b-gray-800 border-gray-900 py-1.5 px-4 xl:py-5 xl:px-24">
         <div className="flex justify-between items-center">
           <div className="flex flex-row items-center gap-2.5 xl:gap-36">
@@ -42,10 +44,12 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="flex gap-4 xl:gap-8 flex-row items-center">
-            <IoSettingsOutline
-              className="text-gray-200 cursor-pointer"
-              size={20}
-            />
+            <Link to="/settings">
+              <IoSettingsOutline
+                className="text-gray-200 cursor-pointer"
+                size={20}
+              />
+            </Link>
             <img
               src={"https://robohash.org/stylescribe"}
               alt="avatar"
