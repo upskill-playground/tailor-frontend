@@ -67,7 +67,7 @@ export const MembersCard: React.FC = () => {
                 <p className="text-sm text-gray-400">jon@mail.com</p>
               </div>
 
-              <button className="text-orange-500 font-semibold text-md border border-orange-500 p-2 rounded-xl">
+              <button className="text-orange-400 font-semibold text-md border border-orange-400 p-2 rounded-xl">
                 Assign
               </button>
             </div>

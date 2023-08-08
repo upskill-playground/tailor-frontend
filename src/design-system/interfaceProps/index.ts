@@ -59,3 +59,33 @@ interface Metrics {
 export interface MetricsCardProps {
   content: Metrics;
 }
+
+export interface TitleProps {
+  title?: string;
+  handleChange?: () => void;
+  onOpen?: () => void;
+  placeholder?: string;
+  btn?: string;
+  isLink?: boolean;
+}
+
+export interface ViewCustomerProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+interface JobCards {
+  title: string;
+  description: string;
+  due_date: string;
+  priority: string;
+  assigned_to: string;
+}
+
+export interface JobCardProps {
+  content: JobCards;
+}
+
+export interface TableProps {
+  onOpen: () => void;
+}

@@ -43,3 +43,30 @@ export const metrics = [
     amount: 10,
   },
 ];
+
+export const jobs = [
+  {
+    title: "Task-056",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Sed elementum at auctor parturient nisi purus pulvinar viverra sit.",
+    due_date: "Aug, 17 2023",
+    priority: "high",
+    assigned_to: "stanis baratheon",
+  },
+  {
+    title: "Task-056",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Sed elementum at auctor parturient nisi purus pulvinar viverra sit.",
+    due_date: "Aug, 17 2023",
+    priority: "medium",
+    assigned_to: "stanis baratheon",
+  },
+  {
+    title: "Task-056",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Sed elementum at auctor parturient nisi purus pulvinar viverra sit.",
+    due_date: "Aug, 17 2023",
+    priority: "low",
+    assigned_to: "stanis baratheon",
+  },
+];
