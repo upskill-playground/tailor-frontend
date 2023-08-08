@@ -11,6 +11,8 @@ const OtpPage: React.FC = () => {
     otpDigit2: "",
     otpDigit3: "",
     otpDigit4: "",
+    otpDigit5: "",
+    otpDigit6: "",
   };
 
   const isFormFilled = (values: formikHelper): boolean => {
@@ -19,7 +21,7 @@ const OtpPage: React.FC = () => {
 
   const handleSubimt = (doc: formikHelper) => {
     const otp = parseInt(
-      `${doc.otpDigit1}${doc.otpDigit2}${doc.otpDigit3}${doc.otpDigit4}`,
+      `${doc.otpDigit1}${doc.otpDigit2}${doc.otpDigit3}${doc.otpDigit4}${doc.otpDigit5}${doc.otpDigit6}`,
     );
     console.log(otp);
   };
@@ -37,7 +39,7 @@ const OtpPage: React.FC = () => {
           {({ values, handleChange }) => (
             <Form>
               <div className="mt-9 ">
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-6 gap-3">
                   <OtpInput
                     type="text"
                     onChange={handleChange}
@@ -76,6 +78,26 @@ const OtpPage: React.FC = () => {
                     max={1}
                     value={values.otpDigit4}
                     name="otpDigit4"
+                    classText={"text-center text-xl"}
+                  />
+                  <OtpInput
+                    type="text"
+                    onChange={handleChange}
+                    minimum={0}
+                    maximum={9}
+                    max={1}
+                    value={values.otpDigit5}
+                    name="otpDigit5"
+                    classText={"text-center text-xl"}
+                  />
+                  <OtpInput
+                    type="text"
+                    onChange={handleChange}
+                    minimum={0}
+                    maximum={9}
+                    max={1}
+                    value={values.otpDigit6}
+                    name="otpDigit6"
                     classText={"text-center text-xl"}
                   />
                 </div>

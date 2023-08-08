@@ -12,21 +12,21 @@ const Navbar: React.FC = () => {
   };
   return (
     <>
-      <div className="block xl:hidden md:hidden">
+      <div className="block lg:hidden">
         <Mobile show={show} handleClose={onClose} />
       </div>
-      <div className="border border-b-gray-800 border-gray-900 py-1.5 px-4 xl:py-5 xl:px-24">
+      <div className="border border-b-gray-800 border-gray-900 py-1.5 px-4 lg:py-5 lg:px-24">
         <div className="flex justify-between items-center">
-          <div className="flex flex-row items-center gap-2.5 xl:gap-36">
+          <div className="flex flex-row items-center gap-2.5 lg:gap-36">
             <div
-              className="block text-gray-25 xl:hidden"
+              className="block text-gray-25  lg:hidden"
               onClick={() => setShow(!show)}
             >
               <IoMenuOutline size={30} />
             </div>
             <p className="m-0 p-0 text-gray-100 text-3xl font-bold">LOGO</p>
 
-            <div className="hidden  xl:flex flex-row gap-8 items-center">
+            <div className="hidden  lg:flex flex-row gap-8 items-center">
               {navLinks.map((route, idx) => (
                 <NavLink
                   key={`${route.name}+${idx}`}
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 xl:gap-8 flex-row items-center">
+          <div className="flex gap-4 lg:gap-8 flex-row items-center">
             <Link to="/settings">
               <IoSettingsOutline
                 className="text-gray-200 cursor-pointer"

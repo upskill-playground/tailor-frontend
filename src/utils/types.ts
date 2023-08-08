@@ -3,6 +3,8 @@ export type formikHelper = {
   otpDigit2: string;
   otpDigit3: string;
   otpDigit4: string;
+  otpDigit5: string;
+  otpDigit6: string;
 };
 
 export type formikLoginHelper = {
