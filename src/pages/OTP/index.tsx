@@ -28,7 +28,7 @@ const OtpPage: React.FC = () => {
 
   return (
     <div className="h-screen grid place-items-center p-3.5">
-      <div className="w-80 xl:w-96">
+      <div className="w-80 lg:w-2/5 md:w-96">
         <Text type="lg" color="text-gray-300">
           Enter the code
         </Text>

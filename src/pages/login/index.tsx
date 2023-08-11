@@ -7,7 +7,7 @@ import Input from "../../design-system/Input";
 import { formikLoginHelper } from "../../utils/types";
 
 const Login: React.FC = () => {
-  let data: formikLoginHelper = {
+  const data: formikLoginHelper = {
     email: "",
   };
 
@@ -20,17 +20,17 @@ const Login: React.FC = () => {
   };
   return (
     <div className="h-screen grid place-items-center p-3.5 overflow-hidden">
-      <div className="w-full xl:w-96 ">
+      <div className="w-80 lg:w-2/5 md:w-96">
         <Text type="lg" align="text-center">
           Welcome
         </Text>
         <Text type="md" color="text-gray-400" align="text-center">
-          Log in to access your Stylescribe account.
+          Access your Stylescribe account.
         </Text>
         <Formik initialValues={data} onSubmit={handleSubimt}>
           {({ values, handleChange }) => (
             <Form>
-              <div className="mt-9">
+              <div className="mt-20">
                 <FormLabel color="text-gray-400">Enter Email</FormLabel>
                 <Input
                   type="email"

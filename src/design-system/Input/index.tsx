@@ -11,7 +11,7 @@ const Input: React.FC<InputProps> = ({
   minimum,
   max,
   maximum,
-  classText,
+  classText = "",
 }) => {
   return (
     <input
@@ -22,9 +22,10 @@ const Input: React.FC<InputProps> = ({
       maxLength={max}
       onChange={onChange}
       name={name}
-      className={`bg-gray-50 p-2.5 text-gray-900 ${classText} font-medium rounded-md placeholder:text-gray-500   ${
+      className={`bg-gray-50 p-3.5 text-gray-900 ${classText} font-medium placeholder:text-black-200   ${
         width || "w-auto"
       } focus:outline-none border border-gray-700`}
+      style={{ borderRadius: "5px" }}
       placeholder={placeholder}
     />
   );
@@ -42,7 +43,7 @@ export const OtpInput: React.FC<InputProps> = ({
   minimum,
   max,
   maximum,
-  classText,
+  classText = "",
 }) => {
   return (
     <input
