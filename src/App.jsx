@@ -7,10 +7,12 @@ import OtpPage from "./pages/OTP";
 import Settings from "./pages/settings";
 import Tasks from "./pages/tasks";
 import PrivateRoutes from "./utils/PrivateRoutes";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <Router>
+      <Toaster />
       <Routes>
         <Route element={<PrivateRoutes />}>
           <Route element={<Dashboard />} exact path="/" />

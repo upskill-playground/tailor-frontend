@@ -12,6 +12,7 @@ const Input: React.FC<InputProps> = ({
   max,
   maximum,
   classText = "",
+  isDisabled,
 }) => {
   return (
     <input
@@ -22,6 +23,7 @@ const Input: React.FC<InputProps> = ({
       maxLength={max}
       onChange={onChange}
       name={name}
+      disabled={isDisabled}
       className={`bg-gray-50 p-3.5 text-gray-900 ${classText} font-medium placeholder:text-black-200   ${
         width || "w-auto"
       } focus:outline-none border border-gray-700`}
@@ -56,7 +58,7 @@ export const OtpInput: React.FC<InputProps> = ({
       name={name}
       className={`bg-gray-700 p-2.5 text-gray-50 ${classText} font-medium rounded-lg placeholder:text-gray-500   ${
         width || "w-auto"
-      } focus:outline-none border border-gray-600`}
+      } focus:outline-none focus:border-orange-500 border border-gray-600`}
       placeholder={placeholder}
     />
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { TableProps } from "../../../design-system/interfaceProps";
+import { TableProps } from "~/design-system/interfaceProps";
 
 const Table: React.FC<TableProps> = ({ onOpen }) => {
   const head = [

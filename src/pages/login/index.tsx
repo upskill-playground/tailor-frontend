@@ -1,18 +1,24 @@
 import React from "react";
-import FormLabel from "../../design-system/FormLabel";
-import Text from "../../design-system/Text";
+import FormLabel from "~/design-system/FormLabel";
+import Text from "~/design-system/Text";
 import { Formik, Form } from "formik";
-import Button from "../../design-system/Button";
-import Input from "../../design-system/Input";
-import { formikLoginHelper } from "../../utils/types";
+import Button from "~/design-system/Button";
+import Input from "~/design-system/Input";
+import { formikLoginHelper } from "~/utils/types";
+import { useDispatch, useSelector } from "react-redux";
+import { validate_email } from "~/pages/login/redux/reducer";
+import { getLoading } from "~/pages/login/redux/selector";
 
 const Login: React.FC = () => {
+  const dispatch = useDispatch();
+  const loading = useSelector(getLoading);
+
   const data: formikLoginHelper = {
     email: "",
   };
 
-  const handleSubimt = (doc: formikLoginHelper) => {
-    console.log(doc);
+  const handleSubimt = (doc: { email: string }) => {
+    dispatch(validate_email(doc));
   };
 
   const isFormFilled = (values: formikLoginHelper): boolean => {
@@ -44,9 +50,9 @@ const Login: React.FC = () => {
                   variant="solid"
                   width="w-full"
                   mt="mt-8"
-                  isDisabled={!isFormFilled(values)}
+                  isDisabled={!isFormFilled(values) || loading}
                 >
-                  Continue
+                  {loading ? "Loading..." : "Continue"}
                 </Button>
               </div>
             </Form>

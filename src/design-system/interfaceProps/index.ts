@@ -33,6 +33,7 @@ export interface InputProps {
   minimum?: number;
   maximum?: number;
   classText?: string;
+  isDisabled?: boolean;
 }
 
 export interface LayoutProps {
@@ -97,4 +98,13 @@ export interface ProfileFormProps {
   onClose: () => void;
   content?: ProfileFormHelper;
   isEdit?: boolean;
+}
+
+export interface loginSagaHelper {
+  email: string;
+}
+
+export interface ValdateOtp {
+  email: string;
+  otp: string;
 }

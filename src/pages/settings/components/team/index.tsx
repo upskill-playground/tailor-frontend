@@ -25,7 +25,9 @@ const Team: React.FC = () => {
           onClick={() => setShow(!show)}
         >
           <AiOutlineUserAdd />
-          <p className="hidden xl:block md:block">Invite a Member</p>
+          <p className="hidden whitespace-nowrap lg:block md:block">
+            Invite a Member
+          </p>
         </button>
       </div>
 
@@ -69,7 +71,7 @@ const Team: React.FC = () => {
                       </p>
                     </div>
                   </td>
-                  <td className="py-3.5 text-base text-gray-300 whitespace-nowrap px-24 xl:px-0 md:px-0 ">
+                  <td className="py-3.5 text-base text-gray-300 whitespace-nowrap px-24 lg:px-0 md:px-0 ">
                     Aug 17, 2023
                   </td>
                   <td className="py-3.5 text-base text-gray-300 whitespace-nowrap ">

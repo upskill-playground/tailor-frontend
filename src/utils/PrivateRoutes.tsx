@@ -1,8 +1,8 @@
 import { Outlet, Navigate } from "react-router-dom";
 
 const PrivateRoutes = () => {
-  let auth = { token: true };
-  return auth.token ? <Outlet /> : <Navigate to="/login" />;
+  let auth = localStorage.getItem("s-scribe-token") || "";
+  return auth !== "" ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoutes;
