@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Customers from "./pages/customers";
 import Dashboard from "./pages/dashboard";
 import Login from "./pages/login";
@@ -15,13 +20,14 @@ const App = () => {
       <Toaster />
       <Routes>
         <Route element={<PrivateRoutes />}>
-          <Route element={<Dashboard />} exact path="/" />
-          <Route element={<Customers />} path="/customers" />
-          <Route element={<Tasks />} path="/tasks" />
-          <Route element={<Settings />} path="/settings" />
+          <Route element={<Dashboard />} exact path="/dashboard" />
+          <Route element={<Customers />} path="/customers" exact />
+          <Route element={<Tasks />} path="/tasks" exact />
+          <Route element={<Settings />} path="/settings" exact />
         </Route>
         <Route element={<Login />} path="/login" />
         <Route element={<OtpPage />} path="/OTP" />
+        <Route exact path="/" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </Router>
   );

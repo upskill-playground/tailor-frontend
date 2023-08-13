@@ -15,6 +15,7 @@ export interface ButtonProps {
   width?: string;
   mt?: string;
   isDisabled?: boolean;
+  handleClick?: () => void;
 }
 
 export interface FormLabelProps {

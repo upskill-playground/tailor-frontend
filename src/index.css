@@ -38,3 +38,8 @@
   background-color: #ccc;
   -webkit-border-radius: 3px;
 }
+
+.spin-button-none::-webkit-outer-spin-button,
+.spin-button-none::-webkit-inner-spin-button {
+  appearance: none;
+}

@@ -29,8 +29,14 @@ function* validateEmailSaga(action: ValidateEmail) {
 
     toast.success(response.message);
 
-    if (window.location.href === "/login") {
+    setTimeout(() => {
       window.location.href = "/OTP";
+    }, 1000);
+
+    if (window?.location?.pathname === "/login") {
+      setTimeout(() => {
+        window.location.href = "/OTP";
+      }, 500);
     }
   } catch (error: any) {
     toast(error.response.data.message, {

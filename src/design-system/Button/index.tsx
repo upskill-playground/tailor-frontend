@@ -7,6 +7,7 @@ const Button: React.FC<ButtonProps> = ({
   width,
   mt,
   isDisabled,
+  handleClick,
 }) => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
             width || "w-auto"
           } ${mt || "mt-0"} cursor-pointer `}
           disabled={isDisabled}
+          onClick={handleClick}
         >
           {children}
         </button>
