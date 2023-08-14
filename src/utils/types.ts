@@ -14,5 +14,16 @@ export type formikLoginHelper = {
 export type ProfileFormHelper = {
   name: string;
   email: string;
-  current_role: string;
+  role: string;
+};
+
+export type User = {
+  createdAt: number;
+  email: string;
+  id: string;
+  name: string;
+  organizationId: string;
+  permissions: any[];
+  role: string;
+  updatedAt: number;
 };

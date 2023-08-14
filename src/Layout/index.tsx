@@ -6,7 +6,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col">
       <Navbar />
-      <div className="px-4 py-4  lg:px-24 lg:py-14">{children}</div>
+      <div className="px-4 py-4  lg:px-40 lg:py-14">{children}</div>
     </div>
   );
 };

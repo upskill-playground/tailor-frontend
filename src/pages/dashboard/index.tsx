@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => {
 
         {/* metrics */}
         <div className="mt-8">
-          <div className="grid grid-cols-1 gap-3.5 lg:gap-8 lg:grid-cols-3 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3.5 lg:gap-3.5 lg:grid-cols-3 md:grid-cols-2">
             {metrics.map((data, idx) => (
               <MetricCard key={idx} content={data} />
             ))}
@@ -24,7 +24,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* recent tasks and team */}
-        <div className="mt-3.5 flex flex-col gap-3.5 lg:flex-row lg:gap-8 lg:items-stretch lg:mt-8">
+        <div className="mt-3.5 flex flex-col gap-3.5 lg:flex-row lg:gap-3.5 lg:items-stretch lg:mt-3.5">
           <TasksCard />
           <MembersCard />
         </div>

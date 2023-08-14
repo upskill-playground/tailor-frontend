@@ -9,6 +9,8 @@ const Tasks: React.FC = () => {
         title={"tasks"}
         btn="add task"
         placeholder="Search by task no, assign to..."
+        linkTo="/tasks/create"
+        isLink={true}
       />
     </Layout>
   );

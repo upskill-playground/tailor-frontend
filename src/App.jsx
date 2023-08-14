@@ -13,6 +13,7 @@ import Settings from "./pages/settings";
 import Tasks from "./pages/tasks";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import { Toaster } from "react-hot-toast";
+import CreateTask from "./pages/createTask";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route element={<Dashboard />} exact path="/dashboard" />
           <Route element={<Customers />} path="/customers" exact />
           <Route element={<Tasks />} path="/tasks" exact />
+          <Route element={<CreateTask />} path="/tasks/create" exact />
           <Route element={<Settings />} path="/settings" exact />
         </Route>
         <Route element={<Login />} path="/login" />

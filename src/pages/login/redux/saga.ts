@@ -27,7 +27,9 @@ function* validateEmailSaga(action: ValidateEmail) {
       type: validate_email_success.type,
     });
 
-    toast.success(response.message);
+    if (window.location.pathname === "/OTP") {
+      toast.success(response.message);
+    }
 
     setTimeout(() => {
       window.location.href = "/OTP";

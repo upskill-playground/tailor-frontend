@@ -31,32 +31,31 @@ const Team: React.FC = () => {
         </button>
       </div>
 
-      <div className="border border-gray-700 bg-gray-800 rounded-lg py-3 px-5 flex flex-col xl:flex-row gap-3.5 items-center md:flex-row">
-        <div className="overflow-x-auto w-full">
-          <table className="table-auto w-full">
-            <thead className="w-full">
-              <tr>
-                {head.map((data, idx) => (
-                  <th
-                    key={`${data}+${idx}`}
-                    className={`text-gray-400 font-semibold capitalize py-3.5 text-left whitespace-nowrap ${
-                      data === "date added" || data === "role"
-                        ? "xl:px-0 px-24"
-                        : "xl:px-0"
-                    } ${data === "actions" && "xl:text-center"} `}
-                  >
-                    {data}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {[...new Array(5)].map((_, idx) => (
-                <tr
-                  key={idx}
-                  className="w-full border border-b-gray-600 border-gray-800 last:border-gray-800 "
+      <div className="border border-gray-700 bg-gray-800 rounded-lg py-3 px-2 overflow-x-auto">
+        <table className="table-auto w-full">
+          <thead>
+            <tr>
+              {head.map((data, idx) => (
+                <th
+                  key={`${data}-${idx}`}
+                  className={`text-gray-400 font-semibold whitespace-nowrap capitalize py-2 lg:py-3 text-left ${
+                    (data === "date added" || data === "role") &&
+                    "lg:px-0 px-16"
+                  } ${data === "actions" && "md:text-left pl-8 pr-0 w-fit"}`}
                 >
-                  <td className="py-3.5 flex flex-row gap-2 items-center ">
+                  {data}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {[...new Array(5)].map((_, idx) => (
+              <tr
+                key={idx}
+                className="border-b border-gray-800 last:border-b-0"
+              >
+                <td>
+                  <div className="py-2 lg:py-3 flex items-center space-x-2 border-b border-gray-800">
                     <img
                       src={`https://robohash.org/stylescribe${idx}`}
                       alt="avatar"
@@ -66,32 +65,32 @@ const Team: React.FC = () => {
                       <p className="text-gray-200 capitalize text-base font-medium whitespace-nowrap">
                         sansa stark
                       </p>
-                      <p className="text-gray-400 text-md font-normal whitespace-nowrap">
+                      <p className="text-gray-400 text-sm md:text-md font-normal whitespace-nowrap">
                         sansa@mail.com
                       </p>
                     </div>
-                  </td>
-                  <td className="py-3.5 text-base text-gray-300 whitespace-nowrap px-24 lg:px-0 md:px-0 ">
-                    Aug 17, 2023
-                  </td>
-                  <td className="py-3.5 text-base text-gray-300 whitespace-nowrap ">
-                    Aug 17, 2023
-                  </td>
-                  <td className="py-3.5 text-base capitalize text-gray-300 whitespace-nowrap px-24 xl:px-0 md:px-24 ">
-                    admin
-                  </td>
-                  <td className="py-3.5  xl:justify-center text-base flex gap-3 text-gray-300 items-center">
-                    <BsViewStacked
-                      className="text-lg cursor-pointer"
-                      onClick={() => setOpen(!open)}
-                    />
-                    <AiOutlineDelete className="text-error-600 text-xl cursor-pointer" />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                  </div>
+                </td>
+                <td className="px-16 lg:px-0 md:px-16 lg:py-0 text-sm md:text-base text-gray-300 whitespace-nowrap">
+                  Aug 17, 2023
+                </td>
+                <td className="py-2 lg:py-3 text-sm md:text-base text-gray-300 whitespace-nowrap">
+                  Aug 17, 2023
+                </td>
+                <td className="px-16 lg:px-0  text-sm md:text-base capitalize text-gray-300 md:px-16">
+                  admin
+                </td>
+                <td className="py-2 lg:py-3  text-sm md:text-base text-gray-300 px-8 flex items-center">
+                  <BsViewStacked
+                    className="text-lg cursor-pointer"
+                    onClick={() => setOpen(!open)}
+                  />
+                  <AiOutlineDelete className="text-error-600 text-xl cursor-pointer" />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

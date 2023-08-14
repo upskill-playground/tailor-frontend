@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { AiOutlineEdit } from "react-icons/ai";
+import { ProfileProps } from "~/design-system/interfaceProps";
 import ProfileForm from "./form";
 
-const Profile: React.FC = () => {
+const Profile: React.FC<ProfileProps> = ({ user }) => {
   const [show, setShow] = useState(false);
-  const user = {
-    name: "john doe",
-    email: "johndoe@mail.com",
-    current_role: "admin",
-  };
+
   return (
     <div className="flex flex-col gap-10  lg:gap-10">
       <ProfileForm show={show} onClose={() => setShow(!show)} content={user} />
@@ -21,20 +18,20 @@ const Profile: React.FC = () => {
 
       <div className="border border-gray-700 bg-gray-800 rounded-lg py-3 px-5 flex flex-col lg:flex-row gap-3.5 items-center md:flex-row">
         <img
-          src={"https://robohash.org/stylescribe"}
+          src={`https://robohash.org/${user.name}`}
           alt="avatar"
           className="w-24 h-24  bg-gray-600 rounded-full"
         />
         <div className="flex justify-between items-center flex-col lg:flex-row w-full md:flex-row">
           <div>
             <p className="text-gray-200 capitalize text-lg font-medium text-center lg:text-left md:text-left">
-              thor odinson
+              {user.name}
             </p>
             <p className="text-base font-normal text-gray-300 text-center lg:text-left md:text-left">
-              pointbreak@mail.com
+              {user.email}
             </p>
             <p className="text-md capitalize font-normal mt-1 text-gray-300 text-center lg:text-left md:text-left">
-              admin
+              {user.role}
             </p>
           </div>
 

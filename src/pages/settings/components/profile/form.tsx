@@ -14,7 +14,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
   let data: ProfileFormHelper = {
     name: content?.name || "",
     email: content?.email || "",
-    current_role: content?.current_role || "",
+    role: content?.role || "",
   };
 
   const handleSubmit = (doc: ProfileFormHelper) => {
@@ -62,7 +62,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
                 type="text"
                 name="role"
                 onChange={handleChange}
-                value={values.current_role}
+                value={values.role}
                 isDisabled={true}
               />
             </div>

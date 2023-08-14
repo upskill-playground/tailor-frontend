@@ -1,4 +1,4 @@
-import { ProfileFormHelper } from "../../utils/types";
+import { User } from "../../utils/types";
 
 export interface TextProps {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ export interface ButtonProps {
   mt?: string;
   isDisabled?: boolean;
   handleClick?: () => void;
+  type?: "button" | "submit";
 }
 
 export interface FormLabelProps {
@@ -71,6 +72,7 @@ export interface TitleProps {
   placeholder?: string;
   btn?: string;
   isLink?: boolean;
+  linkTo?: string;
 }
 
 export interface ViewCustomerProps {
@@ -97,7 +99,7 @@ export interface TableProps {
 export interface ProfileFormProps {
   show: boolean;
   onClose: () => void;
-  content?: ProfileFormHelper;
+  content?: User;
   isEdit?: boolean;
 }
 
@@ -108,4 +110,16 @@ export interface loginSagaHelper {
 export interface ValdateOtp {
   email: string;
   otp: string;
+}
+
+export interface ProfileProps {
+  user: User;
+}
+
+export interface SelectProps {
+  width?: string;
+  options?: any[];
+  handleChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  placeholder?: string;
+  name?: string;
 }

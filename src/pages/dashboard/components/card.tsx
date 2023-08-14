@@ -40,7 +40,7 @@ export const MetricCard: React.FC<MetricsCardProps> = ({ content }) => {
 
 export const MembersCard: React.FC = () => {
   return (
-    <div className="rounded-md p-6 bg-gray-800 w-full border border-gray-600 lg:w-1/4">
+    <div className="rounded-md p-6 bg-gray-800 w-full border border-gray-600 lg:w-1/3">
       <div className="flex items-center justify-between">
         <p className="text-base lg:text-xl font-medium text-gray-300">
           Members
@@ -80,7 +80,7 @@ export const MembersCard: React.FC = () => {
 
 export const TasksCard: React.FC = () => {
   return (
-    <div className="rounded-md p-6 bg-gray-800 w-full border border-gray-600 lg:w-3/4">
+    <div className="rounded-md p-6 bg-gray-800 w-full border border-gray-600 lg:w-2/3">
       <div className="flex items-center justify-between">
         <p className="text-base lg:text-xl font-medium text-gray-300">
           Recent Tasks

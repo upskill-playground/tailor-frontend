@@ -1,7 +1,7 @@
 export const navLinks = [
   {
     name: "dashboard",
-    to: "/",
+    to: "/dashboard",
   },
   {
     name: "customers",
@@ -79,5 +79,20 @@ export const roles = [
   {
     name: "staff",
     value: "staff",
+  },
+];
+
+export const priorities = [
+  {
+    name: "High",
+    value: "high",
+  },
+  {
+    name: "Medium",
+    value: "medium",
+  },
+  {
+    name: "Low",
+    value: "low",
   },
 ];
