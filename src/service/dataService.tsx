@@ -1,5 +1,6 @@
 import axios, { AxiosInstance } from "axios";
 import { v4 as uuidv4 } from "uuid";
+import { getWithExpiry } from "~/utils/localStorage";
 
 const base = import.meta.env.VITE_BASE_URL;
 
@@ -12,7 +13,7 @@ const api: AxiosInstance = axios.create({
 
 api.interceptors.request.use(
   async (config) => {
-    const token = await localStorage.getItem("s-scribe-token");
+    const token = await getWithExpiry("s-scribe-token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

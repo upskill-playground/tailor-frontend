@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { setWithExpiry } from "~/utils/localStorage";
 
 interface UiState {
   loading: boolean;
@@ -21,7 +22,7 @@ export const loginReducerSlice = createSlice({
     validate_email: (state, action: PayloadAction<{ email: string }>) => {
       state.ui.loading = true;
       const { email } = action.payload;
-      localStorage.setItem("s-scribe-email", email);
+      setWithExpiry("s-scribe-email", email);
     },
     validate_email_success: (state) => {
       state.ui.loading = false;

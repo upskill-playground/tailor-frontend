@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
       <div className="block lg:hidden">
         <Mobile show={show} handleClose={onClose} />
       </div>
-      <div className="border border-b-gray-800 border-gray-900 py-1.5 px-4 lg:py-5 lg:px-40">
+      <div className="border border-b-gray-800 border-gray-900 py-1.5 px-4 md:py-5 lg:px-32">
         <div className="flex justify-between items-center">
           <div className="flex flex-row items-center gap-2.5 lg:gap-24">
             <div

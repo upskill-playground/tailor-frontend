@@ -16,7 +16,7 @@ const InviteForm: React.FC<ProfileFormProps> = ({
   let data: ProfileFormHelper = {
     name: content?.name || "",
     email: content?.email || "",
-    current_role: content?.current_role || "",
+    role: content?.role || "",
   };
 
   const handleSubmit = (doc: ProfileFormHelper) => {
@@ -63,7 +63,7 @@ const InviteForm: React.FC<ProfileFormProps> = ({
             <div className="flex flex-col gap-2 mt-5 xl:mt-8">
               <p className="text-gray-100 font-normal text-base">Role</p>
               <select
-                name="current_role"
+                name="role"
                 onChange={handleChange}
                 className="py-3.5 px-3.5 w-full bg-gray-50 text-base rounded-md border border-gray-300 text-gray-800 placeholder:text-gray-500 focus:outline-none"
               >

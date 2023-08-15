@@ -9,6 +9,7 @@ import {
 import { PayloadAction } from "@reduxjs/toolkit";
 import { ValdateOtp } from "~/design-system/interfaceProps";
 import toast from "react-hot-toast";
+import { removeWithExpiry, setWithExpiry } from "~/utils/localStorage";
 
 type ValidatePayload = PayloadAction<ValdateOtp>;
 
@@ -23,8 +24,8 @@ function* validateOtpSaga(action: ValidatePayload) {
     yield put({
       type: validate_otp_success.type,
     });
-    localStorage.removeItem("s-scribe-email");
-    localStorage.setItem("s-scribe-token", response.data.token);
+    removeWithExpiry("s-scribe-email");
+    setWithExpiry("s-scribe-token", response.data.token);
     setTimeout(() => {
       window.location.href = "/";
     }, 1000);

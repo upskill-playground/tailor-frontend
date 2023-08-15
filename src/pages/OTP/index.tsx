@@ -5,12 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLoading } from "~/pages/OTP/redux/selector";
 import { validate_otp } from "~/pages/OTP/redux/reducer";
 import { validate_email } from "~/pages/login/redux/reducer";
+import { getWithExpiry } from "~/utils/localStorage";
 
 let currentOtpIndex: number = 0;
 
 const OtpPage: React.FC = () => {
   const [mail, setMail] = useState("");
-  const email = localStorage.getItem("s-scribe-email") || "";
+  const email = getWithExpiry("s-scribe-email");
   const loading = useSelector(getLoading);
   const dispatch = useDispatch();
   const [timeLeft, setTimeLeft] = useState(120);

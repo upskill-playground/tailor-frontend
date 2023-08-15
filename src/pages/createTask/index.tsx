@@ -51,7 +51,7 @@ const CreateTask: React.FC = () => {
   return (
     <Layout>
       <div className="grid place-items-center">
-        <div className="w-80 md:w-96 lg:w-2/5">
+        <div className="w-80 md:w-96 lg:w-3/5">
           <p className="text-gray-50 text-xl capitalize mb-8 font-medium">
             create task
           </p>

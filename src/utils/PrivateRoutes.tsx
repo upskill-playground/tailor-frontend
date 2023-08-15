@@ -1,7 +1,8 @@
 import { Outlet, Navigate } from "react-router-dom";
+import { getWithExpiry } from "~/utils/localStorage";
 
 const PrivateRoutes = () => {
-  const auth = localStorage.getItem("s-scribe-token");
+  const auth = getWithExpiry("s-scribe-token");
 
   if (auth) {
     return <Outlet />;
