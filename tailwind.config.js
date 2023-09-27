@@ -9,6 +9,22 @@ export default {
       xl: "1440px",
     },
     colors: {
+      main: {
+        primary: '#1A1A2B',
+        secondary: '#1A1C39',
+      },
+      btn: {
+        primary:'#4F7DF5',
+        white: '#fff',
+      },
+      input: {
+        primary: '#FFFFFF1A',
+        secondary: '#FFFFFF33'
+      },
+      textColor: {
+        primary: '#fff',
+        secondary: '#FFFFFFCC'
+      },
       orange: {
         900: "#7E2410",
         800: "#9C2A10",
@@ -47,6 +63,19 @@ export default {
         "2xl": "30px",
         "3xl": "36px",
       },
+      padding: {
+        xs: "10px",
+        lg: '31px',
+        xl: '54px',
+        '3xl': '244px'
+      },
+      width: {
+        lg: '402px'
+      },
+      height: {
+        sm: '85vh',
+        lg: '579px'
+      }
     },
   },
   plugins: [],
