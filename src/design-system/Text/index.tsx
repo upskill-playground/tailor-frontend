@@ -8,12 +8,13 @@ const Text: React.FC<TextProps> = ({
   color,
   mt,
   align,
+  m,
 }) => {
   return (
     <div>
       {type === "lg" ? (
         <h3
-          className={`${fontSize || "text-xl xl:text-3xl"} ${
+          className={`${fontSize || "text-xl md:text-xl"} ${
             color || "text-gray-100"
           } ${align || "text-left"} font-semibold m-0 p-0`}
         >
@@ -21,9 +22,9 @@ const Text: React.FC<TextProps> = ({
         </h3>
       ) : type === "md" ? (
         <h4
-          className={`${fontSize || "text-sm xl:text-base"} ${
+          className={`${fontSize || "text-sm md:text-base"} ${
             color || "text-gray-100"
-          } ${align || "text-left"} font-normal  m-0 p-0`}
+          } ${align || "text-left"} font-normal  ${m || "m-0"} p-0`}
         >
           {children}
         </h4>

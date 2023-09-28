@@ -9,6 +9,18 @@ export default {
       xl: "1440px",
     },
     colors: {
+      font: {
+        primary: "#fff",
+        secondary: "#FFFFFFCC",
+      },
+      input: {
+        primary: "#FFFFFF1A",
+        secondary: "#FFFFFF33",
+      },
+      background: {
+        primary: "#1A1A2B",
+        secondary: "#1A1C39",
+      },
       orange: {
         900: "#7E2410",
         800: "#9C2A10",
@@ -75,6 +87,11 @@ export default {
         50: "#FFFAEB",
         25: "#FFFCF5",
       },
+      primary: "#4F7DF5",
+      btn: {
+        primary: "#4F7DF5",
+        secondary: "#fff",
+      },
     },
 
     extend: {
@@ -87,6 +104,28 @@ export default {
         xl: "24px",
         "2xl": "30px",
         "3xl": "36px",
+      },
+      height: {
+        "80vh": "80vh",
+      },
+      width: {
+        322: "322px",
+        402: "402px",
+        609: "609px",
+      },
+      padding: {
+        31: "31px",
+        54: "54px",
+        60: "60px",
+        79: "79px",
+        244: "244px",
+      },
+      margin: {
+        80: "80px",
+        90: "90px",
+        100: "100px",
+        165: "165px",
+        244: "244px",
       },
     },
   },

@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
       {variant === "solid" ? (
         <button
           type={type}
-          className={`disabled:bg-orange-300 bg-orange-400 text-gray-25 text-base font-semibold rounded-md py-2.5 px-3.5 capitalize ${
+          className={`disabled:opacity-50 bg-btn-primary text-gray-25 text-base font-semibold rounded py-2.5 px-3.5 capitalize ${
             width || "w-auto"
           } ${mt || "mt-0"} cursor-pointer `}
           disabled={isDisabled}

@@ -17,6 +17,7 @@ type ValidateEmail = PayloadAction<ValidateEmailPayload>;
 
 function* validateEmailSaga(action: ValidateEmail) {
   try {
+    console.log(action.payload);
     const request: AxiosResponse = yield call(
       api.post,
       `/api/admin/email`,

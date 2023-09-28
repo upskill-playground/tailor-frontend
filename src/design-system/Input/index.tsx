@@ -24,9 +24,9 @@ const Input: React.FC<InputProps> = ({
       onChange={onChange}
       name={name}
       disabled={isDisabled}
-      className={`bg-gray-50 p-3.5 text-gray-900 ${classText} font-medium placeholder:text-black-200   ${
+      className={`bg-input-primary p-3.5 text-font-primary ${classText} font-medium placeholder:text-black-200   ${
         width || "w-auto"
-      } focus:outline-none border border-gray-700 disabled:bg-gray-300`}
+      } focus:outline-none focus:border-primary border-2 border-input-secondary disabled:bg-gray-300`}
       style={{ borderRadius: "5px" }}
       placeholder={placeholder}
     />

@@ -7,6 +7,7 @@ export interface TextProps {
   color?: string;
   mt?: string;
   align?: string;
+  m?: string;
 }
 
 export interface ButtonProps {
