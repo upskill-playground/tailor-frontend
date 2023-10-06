@@ -7,8 +7,8 @@ const Tasks: React.FC = () => {
     <Layout>
       <Title
         title={"tasks"}
-        btn="add task"
-        placeholder="Search by task no, assign to..."
+        btn="add more tasks"
+        placeholder="Search by task name or number"
         linkTo="/tasks/create"
         isLink={true}
       />

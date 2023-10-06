@@ -1,15 +1,30 @@
 export const navLinks = [
   {
-    name: "dashboard",
-    to: "/dashboard",
-  },
-  {
     name: "customers",
     to: "/customers",
   },
   {
+    name: "reminders",
+    to: "/reminders",
+  },
+  {
+    name: "settings",
+    to: "/settings",
+  },
+  {
+    name: "notifications",
+    to: "/notifications",
+  },
+];
+
+export const otherLinks = [
+  {
     name: "tasks",
     to: "/tasks",
+  },
+  {
+    name: "dashboard",
+    to: "/dashboard",
   },
 ];
 

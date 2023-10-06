@@ -21,6 +21,9 @@ export default {
         primary: "#1A1A2B",
         secondary: "#1A1C39",
       },
+      notification: {
+        primary: "#9D0912",
+      },
       orange: {
         900: "#7E2410",
         800: "#9C2A10",
@@ -109,6 +112,7 @@ export default {
         "80vh": "80vh",
       },
       width: {
+        241: "241px",
         322: "322px",
         402: "402px",
         609: "609px",
@@ -126,6 +130,9 @@ export default {
         100: "100px",
         165: "165px",
         244: "244px",
+      },
+      borderWidth: {
+        1: "1px",
       },
     },
   },
