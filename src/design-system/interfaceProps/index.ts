@@ -124,3 +124,7 @@ export interface SelectProps {
   placeholder?: string;
   name?: string;
 }
+
+export interface BadgeProps {
+  type?: string;
+}

@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         className="absolute bottom-0 -left-10 -z-10"
       />
       <Navbar />
-      <div className="px-4 py-4  lg:px-32 lg:py-14">{children}</div>
+      <div className="px-4 py-4  md:px-16 md:py-14">{children}</div>
     </div>
   );
 };

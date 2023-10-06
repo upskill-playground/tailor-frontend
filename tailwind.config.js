@@ -12,6 +12,7 @@ export default {
       font: {
         primary: "#fff",
         secondary: "#FFFFFFCC",
+        mild: "#FFFFFF99",
       },
       input: {
         primary: "#FFFFFF1A",
@@ -20,6 +21,16 @@ export default {
       background: {
         primary: "#1A1A2B",
         secondary: "#1A1C39",
+        blue: "#4F7DF51A",
+        bgSettings: "#848AE00D",
+        borderColor: "#10182899",
+        hover: "#FFFFFF0D",
+      },
+      badge: {
+        progress: "#B99DFFCC",
+        completed: "#12B76ACC",
+        pending: "#FC7E35CC",
+        cancelled: "#9D0912CC",
       },
       notification: {
         primary: "#9D0912",
@@ -112,6 +123,8 @@ export default {
         "80vh": "80vh",
       },
       width: {
+        73: "73px",
+        92: "92px",
         241: "241px",
         322: "322px",
         402: "402px",
@@ -133,6 +146,7 @@ export default {
       },
       borderWidth: {
         1: "1px",
+        2: "2px",
       },
     },
   },

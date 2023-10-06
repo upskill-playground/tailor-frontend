@@ -4,8 +4,9 @@ import { ProfileFormHelper } from "~/utils/types";
 import { ProfileFormProps } from "~/design-system/interfaceProps";
 import SideModal from "~/design-system/sideModal";
 import Button from "~/design-system/Button";
-import { roles } from "~/utils/enums";
+import { members, roles } from "~/utils/enums";
 import Input from "~/design-system/Input";
+import { BiTrash } from "react-icons/bi";
 
 const InviteForm: React.FC<ProfileFormProps> = ({
   show,
@@ -27,15 +28,31 @@ const InviteForm: React.FC<ProfileFormProps> = ({
       position={show ? "right-0" : "-right-full"}
       opacity={show ? "opacity-1" : "opacity-0"}
       handleClose={onClose}
-      title={isEdit ? "edit member" : "invite member"}
+      title={isEdit ? "Add New Team-Members/Delete Old Ones" : "invite member"}
     >
+      <div className="flex flex-col gap-3">
+        {members.map((member, idx) => (
+          <div
+            key={idx}
+            className="px-4 py-2  flex justify-between items-center cursor-pointer hover:bg-background-hover"
+          >
+            <p className="capitalize text-font-secondary text-sm font-bold">
+              {member.name}
+            </p>
+
+            <div className="cursor-pointer  grid place-items-center text-primary bg-background-blue rounded-full p-1">
+              <BiTrash size={16} />
+            </div>
+          </div>
+        ))}
+      </div>
       <Formik
         initialValues={data}
         onSubmit={handleSubmit}
         enableReinitialize={true}
       >
         {({ handleChange, values }) => (
-          <Form className="p-5 xl:p-10">
+          <Form className="px-4 mt-9">
             <div className="flex flex-col gap-2">
               <p className="text-gray-100 font-normal text-base">Name</p>
               <Input

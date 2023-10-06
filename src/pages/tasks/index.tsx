@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../../design-system/title";
 import Layout from "../../Layout";
+import Table from "~/pages/tasks/components/table";
 
 const Tasks: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Tasks: React.FC = () => {
         linkTo="/tasks/create"
         isLink={true}
       />
+      <Table />
     </Layout>
   );
 };

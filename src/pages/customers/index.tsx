@@ -6,6 +6,7 @@ import ViewCustomer from "./components/viewCustomer";
 
 const Customers: React.FC = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <Layout>
       <ViewCustomer isOpen={open} onClose={() => setOpen(!open)} />
@@ -15,6 +16,7 @@ const Customers: React.FC = () => {
         btn={"add customer"}
         isLink={false}
       />
+
       <Table onOpen={() => setOpen(!open)} />
     </Layout>
   );

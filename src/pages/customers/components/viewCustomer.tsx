@@ -8,7 +8,6 @@ const ViewCustomer: React.FC<ViewCustomerProps> = ({ isOpen, onClose }) => {
   return (
     <SideModal
       position={isOpen ? "right-0" : "-right-full"}
-      opacity={isOpen ? "opacity-1" : "opacity-0"}
       handleClose={onClose}
       title="customer"
     >

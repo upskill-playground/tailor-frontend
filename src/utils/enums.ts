@@ -4,16 +4,8 @@ export const navLinks = [
     to: "/customers",
   },
   {
-    name: "reminders",
-    to: "/reminders",
-  },
-  {
     name: "settings",
     to: "/settings",
-  },
-  {
-    name: "notifications",
-    to: "/notifications",
   },
 ];
 
@@ -109,5 +101,83 @@ export const priorities = [
   {
     name: "Low",
     value: "low",
+  },
+];
+
+export const members = [
+  {
+    name: "Adeolu Adedamola",
+    email: "adeolu@mail.com",
+    role: "staff",
+  },
+
+  {
+    name: "Adeolu Adedamola",
+    email: "adeolu@mail.com",
+    role: "staff",
+  },
+
+  {
+    name: "Adeolu Adedamola",
+    email: "adeolu@mail.com",
+    role: "staff",
+  },
+];
+
+export const customers = [
+  {
+    name: "Mrs. Aminat Gafar",
+    email: "Abolajigafar@gmail.com",
+    phone_number: "+2347076543245",
+    delivery_address:
+      "17b, Musa Yaradua Estate, Lekki-Epe Express way, Lekki, Lagos.",
+    sex: "female",
+    recent_order:
+      " Burgundy print dress, Asoebi For my Event on Saturday, and a white skirt",
+  },
+  {
+    name: "Mrs. Aminat Gafar",
+    email: "Abolajigafar@gmail.com",
+    phone_number: "+2347076543245",
+    delivery_address:
+      "17b, Musa Yaradua Estate, Lekki-Epe Express way, Lekki, Lagos.",
+    sex: "female",
+    recent_order:
+      " Burgundy print dress, Asoebi For my Event on Saturday, and a white skirt",
+  },
+];
+
+export const tasks = [
+  {
+    task_no: "FN205",
+    task_name: "Create seams for Madam Bisi’s wedding dress",
+    assigned_to: "Taiwo",
+    start_date: "11/03/2023",
+    due_date: "11/03/2023",
+    status: "in progress",
+  },
+  {
+    task_no: "FN205",
+    task_name: "Create seams for Madam Bisi’s wedding dress",
+    assigned_to: "Taiwo",
+    start_date: "11/03/2023",
+    due_date: "11/03/2023",
+    status: "completed",
+  },
+  {
+    task_no: "FN205",
+    task_name: "Create seams for Madam Bisi’s wedding dress",
+    assigned_to: "Taiwo",
+    start_date: "11/03/2023",
+    due_date: "11/03/2023",
+    status: "pending",
+  },
+  {
+    task_no: "FN205",
+    task_name: "Create seams for Madam Bisi’s wedding dress",
+    assigned_to: "Taiwo",
+    start_date: "11/03/2023",
+    due_date: "11/03/2023",
+    status: "cancelled",
   },
 ];

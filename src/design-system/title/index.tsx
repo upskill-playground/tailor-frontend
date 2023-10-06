@@ -14,7 +14,7 @@ const Title: React.FC<TitleProps> = ({
   return (
     <div className="flex flex-col gap-4 justify-between lg:items-center lg:flex-row md:flex-row">
       <p className="text-font-primary font-bold text-sm capitalize md:text-sm">
-        {title}:
+        {title}
       </p>
       <div className="flex items-center gap-5">
         <div className="flex items-center h-10 gap-2 w-241 px-2 py-3 bg-input-primary rounded border-1 border-input-secondary ">
